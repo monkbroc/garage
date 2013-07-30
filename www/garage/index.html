@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Set the viewport width to device width for mobile -->
+		<meta name="viewport" content="width=device-width" />
+
+		<title>My Garage</title>
+
+		<!-- Included CSS Files (Compressed) -->
+		<link rel="stylesheet" href="foundation/stylesheets/foundation.min.css">
+		<link rel="stylesheet" href="foundation/stylesheets/app.css">
+
+		<script src="foundation/javascripts/modernizr.foundation.js"></script>
+
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="sha1.js"></script>
+		<script src="garage.js"></script>
+
+		<style type="text/css">
+			.hidden { display: none; }
+			.centered_content { text-align:center; }
+			#result { display: none; }
+		</style>
+
+	</head>
+	<body>
+		<div class="row">
+			<div class="twelve columns">
+				<h2>My Garage</h2>
+				<hr />
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="twelve columns centered_content">
+				<p><img id="door_image" src="garage_large_closed.png"/></p>
+				<h4 id="door_message">The door is closed</h4>
+				<p><a href="#" class="button" id="openclose" disabled="disabled">Open/Close door</a></p>
+				<p id="result"></p>
+			</div>
+		</div>
+
+		<div id="pinModal" class="reveal-modal">
+			<h2>Enter the garage code</h2>
+			<p><form id="pin_form"><input type="password" id="pin" placeholder="PIN"></input></form></p>
+			<p class="centered_content"><a href="#" class="button" id="pin_ok">OK</a></p>
+			<a class="close-reveal-modal">×</a>
+		</div>
+
+		<!-- Included JS Files (Compressed) -->
+		<script src="foundation/javascripts/jquery.js"></script>
+		<script src="foundation/javascripts/foundation.min.js"></script>
+
+		<!-- Initialize JS Plugins -->
+		<script src="foundation/javascripts/app.js"></script>
+	</body>
+</html>
